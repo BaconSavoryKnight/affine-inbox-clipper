@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Clip to AFFiNE Inbox</title>
+<link rel="stylesheet" href="common.css"><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header class="row"><strong>Clip to AFFiNE</strong><span id="dest" class="hint"></span>
+    <a id="settings" href="#" class="hint" style="margin-left:auto">Settings</a></header>
+  <div id="setup" hidden>
+    <p>Connect the clipper to AFFiNE and choose your Inbox folder first.</p>
+    <button class="primary" id="openSettings">Open settings</button>
+  </div>
+  <form id="form" hidden>
+    <label for="title">Title</label>
+    <input type="text" id="title">
+    <label>What to save</label>
+    <div class="seg" id="modes">
+      <label><input type="radio" name="mode" value="key">Key info</label>
+      <label><input type="radio" name="mode" value="snippet">Snippet</label>
+      <label><input type="radio" name="mode" value="selection">Selection</label>
+      <label><input type="radio" name="mode" value="full">Full article</label>
+    </div>
+    <div id="preview" class="hint"></div>
+    <label for="note">Note <span class="hint">(why you saved it — optional)</span></label>
+    <textarea id="note" rows="3"></textarea>
+    <label for="tags">Tags <span class="hint">(comma separated, optional)</span></label>
+    <input type="text" id="tags">
+    <div class="row" style="margin-top:12px">
+      <button class="primary" id="clip" type="submit" disabled>Reading page…</button>
+    </div>
+    <div id="status" class="status"></div>
+  </form>
+  <script src="popup.js"></script>
+</body>
+</html>

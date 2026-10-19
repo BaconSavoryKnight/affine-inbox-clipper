@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>AFFiNE Inbox Clipper — Settings</title>
+<link rel="stylesheet" href="common.css"><link rel="stylesheet" href="options.css"></head>
+<body>
+<main>
+  <h1>AFFiNE Inbox Clipper</h1>
+  <p class="hint">Clips go into one AFFiNE sidebar folder (your Inbox) so they stay separate from notes you've already sorted.</p>
+
+  <section>
+    <h2>1. Connect</h2>
+    <p class="hint">Sign in to AFFiNE in a normal Firefox tab first — the clipper uses that login. Nothing is stored except the settings on this page.</p>
+    <label for="serverUrl">AFFiNE server URL <span class="hint">(AFFiNE Cloud is https://app.affine.pro — change this when you move to self-hosted)</span></label>
+    <div class="row">
+      <input type="url" id="serverUrl" placeholder="https://app.affine.pro">
+      <button class="primary" id="connect">Connect</button>
+    </div>
+    <div id="connStatus" class="status"></div>
+  </section>
+
+  <section id="wsSection" hidden>
+    <h2>2. Choose the Inbox</h2>
+    <label for="workspace">Workspace</label>
+    <select id="workspace"></select>
+    <label for="folder">Inbox folder <span class="hint">(sidebar → Organize)</span></label>
+    <div class="row">
+      <select id="folder"></select>
+      <button id="refreshFolders" title="Reload folders">↻</button>
+    </div>
+    <div class="row" style="margin-top:8px">
+      <input type="text" id="newFolder" placeholder="New folder name" value="Inbox">
+      <button id="createFolder">Create folder</button>
+    </div>
+    <div id="wsStatus" class="status"></div>
+  </section>
+
+  <section>
+    <h2>3. Clip defaults</h2>
+    <label for="defaultMode">Default content</label>
+    <select id="defaultMode">
+      <option value="key">Key info + link (summary, intro, section outline)</option>
+      <option value="snippet">Brief snippet + link</option>
+      <option value="full">Full article (reader-mode text)</option>
+    </select>
+    <label for="introParagraphs">Intro paragraphs in “Key info”</label>
+    <input type="number" id="introParagraphs" min="0" max="6" value="2">
+    <label for="defaultTags">Default tags <span class="hint">(comma separated, e.g. clipped — leave empty for none)</span></label>
+    <input type="text" id="defaultTags">
+    <label><input type="checkbox" id="openAfterClip"> Open the new doc in a tab after clipping</label>
+  </section>
+
+  <div class="row" style="margin-top:18px">
+    <button class="primary" id="save">Save settings</button>
+    <span id="saveStatus" class="status"></span>
+  </div>
+
+  <section>
+    <h2>Shortcuts</h2>
+    <p class="hint">Alt+Shift+C opens the clipper. Alt+Shift+A quick-clips the page (or your selection) with the defaults. Right-click a page, selection or link for “Clip to AFFiNE Inbox”. Change keys in about:addons → ⚙ → Manage Extension Shortcuts.</p>
+  </section>
+</main>
+<script src="options.js"></script>
+</body>
+</html>

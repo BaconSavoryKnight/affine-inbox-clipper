@@ -1,0 +1,4 @@
+body { width: 360px; padding: 12px 14px 14px; }
+header { margin-bottom: 4px; }
+#dest { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px; }
+#preview { margin-top: 6px; }

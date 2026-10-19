@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "AFFiNE Inbox Clipper",
+  "version": "1.0.0",
+  "description": "Clip web pages to your AFFiNE Inbox folder as a short, sortable note: key info, your note, and a link back.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "affine-inbox-clipper@bacon.local",
+      "strict_min_version": "115.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  },
+  "icons": { "48": "icons/icon-48.png", "96": "icons/icon-96.png" },
+  "action": {
+    "default_title": "Clip to AFFiNE Inbox",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png" }
+  },
+  "background": { "scripts": ["background.js"] },
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "permissions": ["activeTab", "scripting", "storage", "contextMenus", "notifications"],
+  "host_permissions": ["https://app.affine.pro/*"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "commands": {
+    "quick-clip": {
+      "suggested_key": { "default": "Alt+Shift+A" },
+      "description": "Quick-clip the current page (or selection) to the AFFiNE Inbox"
+    },
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+C" }
+    }
+  }
+}

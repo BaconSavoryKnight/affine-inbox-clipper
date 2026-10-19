@@ -1,0 +1,6 @@
+main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 20px; margin: 0 0 4px; }
+h2 { font-size: 15px; margin: 0 0 6px; }
+section { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-top: 16px; }
+.row input, .row select { flex: 1; }
+label input[type=checkbox] { margin-right: 6px; }
