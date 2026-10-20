@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
   "name": "AFFiNE Inbox Clipper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Clip web pages to your AFFiNE Inbox folder as a short, sortable note: key info, your note, and a link back.",
   "browser_specific_settings": {
     "gecko": {
       "id": "affine-inbox-clipper@bacon.local",
-      "strict_min_version": "115.0",
+      "strict_min_version": "140.0",
       "data_collection_permissions": { "required": ["none"] }
     }
   },

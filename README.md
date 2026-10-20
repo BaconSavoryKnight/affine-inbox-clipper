@@ -2,7 +2,7 @@
 
 Clips web pages into **one AFFiNE sidebar folder, your Inbox**, so they stay out of the notes you've already sorted. A clip is short by default: a link card, a source line, your note, a summary, the intro, and the page's section outline. A full-article mode is there when you need it.
 
-An unofficial, community-made clipper (not affiliated with AFFiNE / Toeverything). Works in Firefox 115+ and Firefox-based browsers (LibreWolf, Zen, Floorp, Waterfox, Mullvad Browser).
+An unofficial, community-made clipper (not affiliated with AFFiNE / Toeverything). Works in Firefox 140+ and Firefox-based browsers (LibreWolf, Zen, Floorp, Waterfox, Mullvad Browser).
 
 ## What a clip looks like (Key info mode)
 
